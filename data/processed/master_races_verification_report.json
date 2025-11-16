@@ -1,0 +1,154 @@
+{
+  "dataset": "master_races.csv",
+  "verification_date": "2025-11-16 16:41:59",
+  "basic_stats": {
+    "total_rows": 12358,
+    "total_columns": 82,
+    "date_range_start": "1994-03-27 00:00:00",
+    "date_range_end": "2024-12-08 00:00:00",
+    "year_range": "1994-2024"
+  },
+  "uniqueness": {
+    "unique_race_driver_pairs": 12358,
+    "duplicates_found": 0,
+    "status": "PASS"
+  },
+  "temporal_coverage": {
+    "expected_years": [
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "actual_years": [
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "missing_years": [],
+    "avg_races_per_year": 18.612903225806452
+  },
+  "merge_success_rates": [
+    {
+      "source": "results",
+      "coverage_pct": 100.0,
+      "coverage_count": 12358,
+      "status": "\u2705"
+    },
+    {
+      "source": "races",
+      "coverage_pct": 100.0,
+      "coverage_count": 12358,
+      "status": "\u2705"
+    },
+    {
+      "source": "circuits",
+      "coverage_pct": 100.0,
+      "coverage_count": 12358,
+      "status": "\u2705"
+    },
+    {
+      "source": "drivers",
+      "coverage_pct": 100.0,
+      "coverage_count": 12358,
+      "status": "\u2705"
+    },
+    {
+      "source": "constructors",
+      "coverage_pct": 100.0,
+      "coverage_count": 12358,
+      "status": "\u2705"
+    },
+    {
+      "source": "driver_standings",
+      "coverage_pct": 97.46722770674866,
+      "coverage_count": 12045,
+      "status": "\u2705"
+    },
+    {
+      "source": "constructor_standings",
+      "coverage_pct": 99.04515293736851,
+      "coverage_count": 12240,
+      "status": "\u2705"
+    },
+    {
+      "source": "constructor_results",
+      "coverage_pct": 99.98381615148082,
+      "coverage_count": 12356,
+      "status": "\u2705"
+    },
+    {
+      "source": "qualifying",
+      "coverage_pct": 84.91665318012623,
+      "coverage_count": 10494,
+      "status": "\u26a0\ufe0f"
+    },
+    {
+      "source": "sprint_results",
+      "coverage_pct": 2.913092733452015,
+      "coverage_count": 360,
+      "status": "\u274c"
+    }
+  ],
+  "data_quality": {
+    "invalid_positions": 0,
+    "invalid_dates": 0,
+    "year_date_mismatches": 0,
+    "podium_rate": 0.14007120893348438
+  }
+}
