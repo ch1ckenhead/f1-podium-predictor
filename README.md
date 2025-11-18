@@ -2,7 +2,7 @@
 
 A comprehensive machine learning project to predict Formula 1 driver podium probabilities (top-3 finish) using historical race data, telemetry, and weather information.
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 📋 Table of Contents
@@ -77,6 +77,9 @@ F1/
 │   ├── 00_data_fastf1.ipynb     # FastF1 data extraction
 │   ├── 01_data_verification.ipynb # Data quality checks
 │   ├── 02_data_combining.ipynb   # Combine Kaggle CSVs
+│   ├── 02.6_telemetry_exploration.ipynb # Telemetry data exploration
+│   ├── 02.7_weather_exploration.ipynb # Weather data exploration
+│   ├── 02.8_laps_exploration.ipynb # Laps data exploration
 │   ├── 03_exploratory_data_analysis.ipynb # EDA and visualizations
 │   ├── 04_feature_engineering.ipynb # Feature creation
 │   ├── 05_modeling.ipynb         # Model training and evaluation
@@ -84,6 +87,8 @@ F1/
 ├── models/                        # Trained model files
 ├── docs/                          # Additional documentation
 ├── reports/                       # Analysis reports
+├── requirements.txt               # Python dependencies
+├── feature_ideas.txt              # Feature engineering ideas
 └── README.md
 ```
 
@@ -109,10 +114,13 @@ F1/
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- pip or conda package manager
+- **Python 3.11** (required - some packages like CatBoost may have compatibility issues with newer versions)
+- pip package manager
+- Git (for cloning the repository)
 
-### Setup
+**Note**: This project requires Python 3.11 specifically. Python 3.12+ may cause installation issues with CatBoost and other dependencies.
+
+### Setup for New Collaborators
 
 1. **Clone the repository:**
 ```bash
@@ -120,38 +128,100 @@ git clone https://github.com/ch1ckenhead/f1-podium-predictor.git
 cd f1-podium-predictor
 ```
 
-2. **Create a virtual environment (recommended):**
-```bash
-# Using venv
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+2. **Install Python 3.11 (if not already installed):**
+   - **Windows**: Download from [python.org](https://www.python.org/downloads/release/python-3110/) or use [pyenv-win](https://github.com/pyenv-win/pyenv-win)
+   - **macOS/Linux**: Use `pyenv` to install Python 3.11:
+     ```bash
+     pyenv install 3.11.0
+     pyenv local 3.11.0
+     ```
 
-# Or using conda
-conda create -n f1-predictor python=3.10
-conda activate f1-predictor
+3. **Create a virtual environment with Python 3.11:**
+```bash
+# Using venv (Windows)
+python3.11 -m venv venv
+venv\Scripts\activate
+
+# Using venv (macOS/Linux)
+python3.11 -m venv venv
+source venv/bin/activate
+
+# Verify Python version
+python --version  # Should show Python 3.11.x
 ```
 
-3. **Install dependencies:**
+4. **Upgrade pip (recommended):**
+```bash
+python -m pip install --upgrade pip
+```
+
+5. **Install dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
 
-**Key Dependencies:**
-- `pandas` - Data manipulation
-- `numpy` - Numerical computing
-- `fastf1` - F1 data API
-- `scikit-learn` - Machine learning utilities
-- `lightgbm` - LightGBM gradient boosting
-- `catboost` - CatBoost gradient boosting
-- `pytorch-tabnet` - TabNet deep learning model
-- `shap` - Model interpretability
-- `matplotlib` - Plotting
-- `seaborn` - Statistical visualizations
-- `jupyter` - Notebook environment
+**Note on CatBoost Installation:**
+- If you encounter errors installing CatBoost, it may be trying to build from source
+- On Windows, you may need Visual Studio Build Tools 2022 or use pre-built wheels
+- If issues persist, you can temporarily comment out `catboost` in `requirements.txt` and install it separately:
+  ```bash
+  pip install catboost --only-binary :all:
+  ```
 
-4. **Download Data:**
+**Key Dependencies:**
+- **Core Data Processing**: `pandas>=2.0.0`, `numpy>=1.24.0`
+- **FastF1 API**: `fastf1>=3.0.0`
+- **Machine Learning**: `scikit-learn>=1.3.0`, `lightgbm>=4.0.0`, `catboost>=1.2.0`, `pytorch-tabnet>=4.0.0`, `torch>=2.0.0`
+- **Model Interpretability**: `shap>=0.42.0`
+- **Visualization**: `matplotlib>=3.7.0`, `seaborn>=0.12.0`
+- **Utilities**: `joblib>=1.3.0`
+- **Jupyter**: `jupyter>=1.0.0`, `ipykernel>=6.25.0`
+- **Optional**: `memory-profiler>=0.61.0` (for telemetry exploration)
+
+6. **Set up JupyterLab:**
+```bash
+# Install JupyterLab (if not already installed)
+pip install jupyterlab
+
+# Start JupyterLab (no browser mode - copy the URL with token)
+jupyter lab --no-browser
+
+# The terminal will show a URL like:
+# http://127.0.0.1:8888/lab?token=abc123...
+# Copy this ENTIRE URL (including ?token=...) and paste it in your browser
+```
+
+**Alternative: Set JupyterLab Password (instead of token):**
+```bash
+jupyter lab password
+# Then start normally
+jupyter lab --no-browser
+```
+
+7. **Download Data:**
    - **Kaggle Data**: Download from [Kaggle](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020) and place CSV files in `data/raw/kaggle/`
    - **FastF1 Data**: Run `notebooks/00_data_fastf1.ipynb` to extract data (or use pre-extracted CSVs in `data/raw/fastf1_2018plus/`)
+
+### Troubleshooting
+
+**CatBoost Installation Issues:**
+- **Error**: "Microsoft Visual Studio 2022 installation not found"
+  - **Solution 1**: Install [Visual Studio Build Tools 2022](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022)
+  - **Solution 2**: Force pre-built wheels: `pip install catboost --only-binary :all:`
+  - **Solution 3**: Use Python 3.11 (not 3.12+) which has better wheel support
+
+**JupyterLab 403 Forbidden Error:**
+- Make sure you're using the full URL with token: `http://127.0.0.1:8888/lab?token=XXXXX`
+- Stop all running servers: `jupyter lab stop`
+- Clear runtime: `jupyter lab clean`
+- Restart JupyterLab and use the new token URL
+
+**Python Version Issues:**
+- Verify Python version: `python --version` (should be 3.11.x)
+- If using multiple Python versions, ensure your virtual environment uses 3.11:
+  ```bash
+  python3.11 -m venv venv
+  ```
 
 ## 📖 Usage
 
@@ -175,6 +245,13 @@ The project follows a sequential notebook workflow:
    - Intelligent column deduplication
    - Filters to 1994+ data
    - Outputs: `master_races.csv`
+
+3.5. **FastF1 Data Exploration** (Optional - for feature engineering planning)
+   - **Telemetry Exploration** (`02.6_telemetry_exploration.ipynb`): Memory-efficient analysis of large telemetry datasets
+   - **Weather Exploration** (`02.7_weather_exploration.ipynb`): Weather data structure and consistency checks
+   - **Laps Exploration** (`02.8_laps_exploration.ipynb`): Lap timing data analysis and validation
+   - These notebooks help understand FastF1 data structure before feature extraction
+   - Outputs: Data summaries, row count comparisons, feature recommendations
 
 4. **Exploratory Data Analysis** (`03_exploratory_data_analysis.ipynb`)
    - Target variable analysis (podium distribution)
@@ -262,6 +339,60 @@ predictions = model.predict_proba(features[feature_columns])[:, 1]
 - `master_races.csv` - Combined master dataset
 - `master_races_schema.md` - Schema documentation
 
+### 02.6_telemetry_exploration.ipynb
+**Purpose**: Memory-efficient exploration of large telemetry datasets (2018-2024)
+
+**Features**:
+- Chunked reading to handle multi-GB files without memory overflow
+- File size analysis and row count estimation
+- Stratified sampling (beginning, middle, end of files)
+- Year-over-year row count comparison for data completeness
+- Summary statistics via chunked processing
+- Feature extraction planning template
+
+**Key Functions**:
+- `get_columns_info()` - Efficient column discovery
+- `count_rows_chunked()` - Memory-efficient row counting
+- `get_stratified_sample()` - Representative sampling
+- `get_summary_stats_chunked()` - Chunked statistics calculation
+
+**Outputs**:
+- Data structure summaries
+- Row count comparisons across years
+- Feature extraction recommendations
+
+### 02.7_weather_exploration.ipynb
+**Purpose**: Explore and validate weather data structure and consistency
+
+**Features**:
+- File size and structure analysis
+- Column discovery and data types
+- Row count comparison across years (normalized by number of races)
+- Data completeness validation (events, sessions coverage)
+- Weather feature consistency analysis
+- Visualization of weather patterns
+
+**Outputs**:
+- Weather data summaries
+- Completeness validation reports
+- Feature extraction recommendations
+
+### 02.8_laps_exploration.ipynb
+**Purpose**: Explore and validate lap timing data structure and consistency
+
+**Features**:
+- File size and structure analysis
+- Column discovery and data types
+- Row count comparison across years (normalized by number of races)
+- Data completeness validation (events, sessions, drivers)
+- Lap time and speed feature analysis
+- Tyre data consistency checks
+
+**Outputs**:
+- Laps data summaries
+- Completeness validation reports
+- Feature extraction recommendations
+
 ### 03_exploratory_data_analysis.ipynb
 **Purpose**: Comprehensive exploratory data analysis
 
@@ -279,6 +410,8 @@ predictions = model.predict_proba(features[feature_columns])[:, 1]
 ### 04_feature_engineering.ipynb
 **Purpose**: Create all features for modeling
 
+**Note**: See `feature_ideas.txt` for a comprehensive list of potential features from all data sources.
+
 **Feature Categories**:
 1. **Static Features**:
    - Grid position (grid, grid_top3, grid_top10, grid_pole)
@@ -295,12 +428,16 @@ predictions = model.predict_proba(features[feature_columns])[:, 1]
    - Constructor average points (3, 5, 10 race windows)
    - Total podiums and races completed
 
-3. **Placeholder Features** (for future FastF1 integration):
-   - `lap_time_variance`
-   - `throttle_variance`
-   - `overtake_attempts`
-   - `avg_pit_stops`
-   - Weather features (air_temp, track_temp, rainfall_mm, wind_speed, wind_direction)
+3. **FastF1 Features** (from telemetry, laps, weather data):
+   - Telemetry: `lap_time_variance`, `throttle_variance`, `overtake_attempts`, speed/brake patterns
+   - Laps: Sector times, tyre strategies, pit stop patterns
+   - Weather: `air_temp`, `track_temp`, `rainfall_mm`, `wind_speed`, `wind_direction`
+
+4. **Master CSV Features** (from combined Kaggle data):
+   - Race results & performance metrics
+   - Championship standings (pre-race)
+   - Sprint race results
+   - Derived historical features
 
 **Outputs**:
 - `features.csv` - Final feature set for modeling
