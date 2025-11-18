@@ -1,0 +1,430 @@
+================================================================================
+F1 FEATURE ENGINEERING IDEAS
+================================================================================
+
+This document outlines potential features to extract from FastF1 data (LAPS, 
+TELEMETRY, WEATHER) and the master_races.csv dataset for predicting race outcomes.
+
+================================================================================
+1. TELEMETRY DATA FEATURES (2018+)
+================================================================================
+
+1.1 Relative Pace (Speed) to Leader
+    Description: Difference between a driver's lap time and the fastest lap in 
+                 the same window.
+    Why: Directly measures competitiveness against the field.
+
+1.2 DRS/Throttle Usage Patterns
+    Description: Frequency and duration of DRS activation or throttle max-out.
+    Why: Aggressive use may correlate with overtaking attempts or defending 
+         position.
+
+1.3 Position Change Rate
+    Description: Derivative of position over time (how quickly a driver 
+                 gains/loses places).
+    Why: Momentum in race progression is a strong signal of eventual 
+         finishing position.
+
+1.4 Weather/Track Status Adjustments
+    Description: Driver performance adaptation to changing conditions.
+    Why: Drivers who adapt quickly to conditions often outperform.
+
+1.5 Overtaking Skill Metric
+    Description: Proportion of overtakes without DRS vs with DRS.
+    Why: Measures driver skill in wheel-to-wheel racing.
+
+
+================================================================================
+2. LAP DATA FEATURES (2018+)
+================================================================================
+
+2.1 Pace & Consistency
+    ────────────────────────────────────────────────────────────────────────
+    2.1.1 Rolling Average Lap Time
+          Formula: mean(LapTime over last N laps)
+          Why: Captures sustained pace rather than one-off fast laps.
+    
+    2.1.2 Lap Time Variance / Standard Deviation
+          Formula: std(LapTime over stint)
+          Why: Lower variance = consistency, often predictive of strong race 
+               performance.
+    
+    2.1.3 Sector Time Balance
+          Formula: (Sector1Time + Sector2Time + Sector3Time) / LapTime
+          Why: Ratio consistency across sectors can highlight driver 
+               strengths/weaknesses.
+
+2.2 Tyre & Stint Dynamics
+    ────────────────────────────────────────────────────────────────────────
+    2.2.1 Tyre Degradation Rate
+          Formula: slope of LapTime vs. LapNumber within a stint
+          Why: Measures how quickly lap times worsen on a compound.
+    
+    2.2.2 Fresh Tyre Impact
+          Formula: LapTime difference between FreshTyre=True and subsequent laps
+          Why: Quantifies benefit of new tyres.
+    
+    2.2.3 Compound Performance Differential
+          Formula: avg LapTime per Compound
+          Why: Useful for comparing tyre strategies across drivers.
+
+2.3 Pit Stop & Strategy
+    ────────────────────────────────────────────────────────────────────────
+    2.3.1 Pit Stop Loss
+          Formula: PitInTime - PitOutTime
+          Why: Time lost during pit stops relative to average pit stop duration.
+    
+    2.3.2 Pit Stop Timing
+          Formula: LapNumber at first pit stop
+          Why: Early vs. late strategy indicator.
+    
+    2.3.3 Stint Length
+          Formula: max(LapNumber) - min(LapNumber) per stint
+          Why: Longer stints may indicate tyre conservation.
+
+2.4 Speedtrap & Sector-Based Features
+    ────────────────────────────────────────────────────────────────────────
+    2.4.1 Max Speed Indicators
+          Formula: max(SpeedI1, SpeedI2, SpeedFL, SpeedST) per lap
+          Why: Reflects car power and aero efficiency.
+    
+    2.4.2 Speed Consistency
+          Formula: Variance of SpeedFL across laps
+          Why: Stability in straight-line performance.
+    
+    2.4.3 Sector Speed vs. LapTime
+          Formula: Correlation between SpeedI1/SpeedI2 and LapTime
+          Why: Efficiency in converting speed into lap time.
+
+2.5 Race Context & Reliability
+    ────────────────────────────────────────────────────────────────────────
+    2.5.1 Track Status Adjusted Pace
+          Formula: Average LapTime under green flag vs. safety car/VSC
+          Why: Drivers who maximize pace under green flag are more competitive.
+    
+    2.5.2 Deleted Lap Ratio
+          Formula: count(Deleted=True) / total laps
+          Why: High ratio = poor track limits discipline → predictive of 
+               penalties.
+    
+    2.5.3 Position Change Rate
+          Formula: ΔPosition / ΔLapNumber
+          Why: Captures momentum in race progression.
+
+2.6 Derived Composite Features
+    ────────────────────────────────────────────────────────────────────────
+    2.6.1 Tyre Efficiency Index
+          Formula: (avg LapTime on compound) / TyreLife
+          Why: Pace normalized by tyre wear.
+    
+    2.6.2 Consistency Score
+          Formula: 1 / (LapTime variance + Deleted Lap ratio)
+          Why: Higher = more reliable performer.
+    
+    2.6.3 Pit Strategy Aggressiveness
+          Formula: number of pit stops / total laps
+          Why: Aggressive strategies may correlate with certain race outcomes.
+
+
+================================================================================
+3. WEATHER DATA FEATURES (2018+)
+================================================================================
+
+3.1 Raw Weather Metrics
+    ────────────────────────────────────────────────────────────────────────
+    3.1.1 AirTemp (°C)
+          Description: Baseline ambient temperature affects engine cooling and 
+                      tyre performance.
+          Usage: Classify races into "hot", "moderate", "cool" conditions.
+    
+    3.1.2 TrackTemp (°C)
+          Description: Strong predictor of tyre degradation and grip.
+          Usage: Often available from pre-race forecasts or track sensors.
+    
+    3.1.3 Humidity (%)
+          Description: High humidity increases rain likelihood and affects 
+                      cooling efficiency.
+          Usage: Useful as a categorical feature (low/medium/high).
+    
+    3.1.4 Pressure (mbar)
+          Description: Lower pressure often indicates unstable weather.
+          Usage: Can be used as a proxy for rain risk.
+    
+    3.1.5 WindSpeed (m/s)
+          Description: Impacts car stability, especially in high-downforce 
+                      corners.
+          Usage: Known before the race from forecasts.
+    
+    3.1.6 WindDirection (°)
+          Description: Can be simplified into categorical bins (e.g., headwind 
+                      vs. tailwind on main straight).
+          Usage: Influences overtaking and aero balance.
+    
+    3.1.7 Rainfall (bool)
+          Description: Forecasted rain at race start is highly predictive of 
+                      strategy chaos.
+          Usage: Can be treated as a binary feature (wet vs. dry start).
+
+3.2 Temperature Features
+    ────────────────────────────────────────────────────────────────────────
+    3.2.1 TrackTemp Variance
+          Formula: std(TrackTemp over session)
+          Why: High variance = unstable grip conditions, predictive of more 
+               race incidents or strategy shifts.
+
+3.3 Rainfall Features
+    ────────────────────────────────────────────────────────────────────────
+    3.3.1 Rainfall Flag Duration
+          Formula: cumulative time Rainfall=True
+          Why: Indicates how long wet conditions persist.
+    
+    3.3.2 Rainfall Transition Events
+          Formula: Count of dry→wet or wet→dry transitions
+          Why: Predictive of chaotic races where strategy plays a bigger role.
+
+3.4 Wind Features
+    ────────────────────────────────────────────────────────────────────────
+    3.4.1 Wind Speed Variance
+          Formula: std(WindSpeed)
+          Why: High variance = gusty conditions, which destabilize cars in 
+               corners and straights.
+
+3.5 Derived Pre-Race Features
+    ────────────────────────────────────────────────────────────────────────
+    3.5.1 Dry vs. Wet Start Flag
+          Formula: Rainfall=True at race start → binary feature
+          Why: Strongly predictive of race outcome variability.
+    
+    3.5.2 Grip Potential Index
+          Formula: TrackTemp / Humidity
+          Why: Higher values = hotter, drier track → better grip. Lower values 
+               = slippery conditions.
+    
+    3.5.3 Cooling Stress Index
+          Formula: AirTemp + Humidity
+          Why: High values indicate tough cooling conditions for engines and 
+               brakes.
+    
+    3.5.4 Wind Risk Category
+          Formula: WindSpeed > threshold → "gusty" vs. "stable" conditions
+          Why: Can be simplified into categorical bins.
+
+
+================================================================================
+4. MASTER RACES CSV FEATURES (1994+)
+================================================================================
+
+4.1 Race Results Features
+    ────────────────────────────────────────────────────────────────────────
+    4.1.1 Grid Position
+          Column: grid
+          Usage: Starting position is a strong predictor of finishing 
+                 position. Can create binary flags (grid_top3, grid_top10, 
+                 grid_pole).
+    
+    4.1.2 Finishing Position
+          Column: position, positionOrder
+          Usage: Target variable or historical performance indicator.
+    
+    4.1.3 Points Scored
+          Column: points
+          Usage: Direct outcome measure, can be used for rolling averages.
+    
+    4.1.4 Laps Completed
+          Column: laps
+          Usage: Reliability indicator, can flag DNFs or partial completions.
+    
+    4.1.5 Race Time / Milliseconds
+          Column: time, milliseconds
+          Usage: Performance metric, can calculate time gaps to leader.
+    
+    4.1.6 Fastest Lap Data
+          Columns: fastestLap, fastestLapTime, fastestLapSpeed, rank
+          Usage: Driver pace indicator, fastest lap rank shows relative speed.
+    
+    4.1.7 Status
+          Column: statusId
+          Usage: Classify finishes (Finished, DNF, DSQ, etc.) - important for 
+                 reliability features.
+
+4.2 Race Context Features
+    ────────────────────────────────────────────────────────────────────────
+    4.2.1 Year / Season
+          Column: year
+          Usage: Temporal features, era-specific performance (e.g., 2014+ 
+                 hybrid era).
+    
+    4.2.2 Round Number
+          Column: round
+          Usage: Early vs. late season performance, championship pressure.
+    
+    4.2.3 Race Date
+          Column: date
+          Usage: Temporal trends, day of week, month (weather patterns).
+    
+    4.2.4 Race Name
+          Column: name
+          Usage: Circuit-specific performance patterns.
+
+4.3 Circuit Features
+    ────────────────────────────────────────────────────────────────────────
+    4.3.1 Circuit Name
+          Column: circuit_name
+          Usage: Track-specific driver/constructor strengths.
+    
+    4.3.2 Location / Country
+          Columns: location, country
+          Usage: Geographic patterns, home advantage, climate zones.
+    
+    4.3.3 Geographic Coordinates
+          Columns: lat, lng
+          Usage: Distance from home, timezone effects.
+    
+    4.3.4 Altitude
+          Column: alt
+          Usage: High-altitude tracks affect engine performance and aero.
+
+4.4 Driver Features
+    ────────────────────────────────────────────────────────────────────────
+    4.4.1 Driver Reference / Code
+          Columns: driverRef, code
+          Usage: Driver-specific performance patterns.
+    
+    4.4.2 Driver Name
+          Columns: forename, surname
+          Usage: Human-readable identifiers.
+    
+    4.4.3 Date of Birth
+          Column: dob
+          Usage: Calculate driver age at race time - experience vs. youth.
+    
+    4.4.4 Nationality
+          Column: nationality
+          Usage: Home advantage, cultural factors.
+
+4.5 Constructor Features
+    ────────────────────────────────────────────────────────────────────────
+    4.5.1 Constructor Reference / Name
+          Columns: constructorRef, name
+          Usage: Car performance, team-specific strengths.
+    
+    4.5.2 Constructor Nationality
+          Column: nationality
+          Usage: Team location effects.
+
+4.6 Championship Standings Features
+    ────────────────────────────────────────────────────────────────────────
+    4.6.1 Driver Standings
+          Columns: driverStandingsId, points, position, positionText, wins
+          Usage: Championship position, momentum, pressure indicators. Can create 
+                 rolling averages of points/position over last N races.
+    
+    4.6.2 Constructor Standings
+          Columns: constructorStandingsId, points, position, positionText, wins
+          Usage: Team championship position, car development stage.
+    
+    4.6.3 Constructor Results
+          Columns: constructorResultsId, points, status
+          Usage: Team-level performance metrics.
+
+4.7 Qualifying Features
+    ────────────────────────────────────────────────────────────────────────
+    4.7.1 Qualifying Position
+          Column: position (from qualifying table)
+          Usage: One-lap pace indicator, grid position predictor.
+    
+    4.7.2 Qualifying Times
+          Columns: q1, q2, q3
+          Usage: Qualifying pace, progression through sessions, can calculate 
+                 gaps to pole.
+
+4.8 Sprint Race Features (2021+)
+    ────────────────────────────────────────────────────────────────────────
+    4.8.1 Sprint Results
+          Columns: sprint_results_* (position, points, laps, time, etc.)
+          Usage: Sprint performance as predictor for main race, sprint grid 
+                 position.
+
+4.9 Derived Features from Master CSV
+    ────────────────────────────────────────────────────────────────────────
+    4.9.1 Grid to Position Change
+          Formula: grid - positionOrder
+          Why: Measures race performance improvement/decline.
+    
+    4.9.2 Driver Age at Race
+          Formula: date - dob
+          Why: Experience vs. youth balance.
+    
+    4.9.3 Rolling Historical Performance
+          Formula: Mean/median points, position, wins over last N races
+          Why: Momentum and form indicators.
+    
+    4.9.4 Circuit Performance History
+          Formula: Average position at specific circuit over career
+          Why: Track-specific driver strengths.
+    
+    4.9.5 Championship Pressure
+          Formula: Position in standings, points gap to leader
+          Why: Pressure situations affect performance.
+    
+    4.9.6 Season Progression
+          Formula: round / total_rounds_in_season
+          Why: Early vs. late season performance differences.
+    
+    4.9.7 Home Advantage
+          Formula: nationality == country (for driver or constructor)
+          Why: Local support and familiarity.
+    
+    4.9.8 Reliability Score
+          Formula: 1 - (DNF_count / total_races)
+          Why: Finishing races is crucial for championship points.
+    
+    4.9.9 Qualifying to Race Performance
+          Formula: qualifying_position - finishing_position
+          Why: Race pace vs. qualifying pace differential.
+    
+    4.9.10 Fastest Lap Indicator
+           Formula: rank == 1 (for fastest lap)
+           Why: Raw pace indicator, bonus point opportunity.
+
+
+================================================================================
+5. FEATURE EXTRACTION PRIORITY
+================================================================================
+
+HIGH PRIORITY (Strong predictive power, available for most races):
+  - Grid position and qualifying position
+  - Rolling historical performance (points, position, wins)
+  - Circuit-specific performance history
+  - Driver age and experience
+  - Constructor performance trends
+  - Championship standings and pressure
+
+MEDIUM PRIORITY (Good predictive power, available 2018+):
+  - Lap time consistency and pace metrics
+  - Tyre degradation and strategy features
+  - Weather conditions (temperature, rainfall)
+  - Fastest lap data
+  - Position change rate
+
+LOW PRIORITY (Nice to have, exploratory):
+  - Detailed telemetry patterns (DRS usage, throttle)
+  - Sector-by-sector analysis
+  - Wind direction and pressure
+  - Sprint race features (limited data)
+
+
+================================================================================
+6. NOTES
+================================================================================
+
+- Master CSV features are available for all races 1994+
+- FastF1 features (LAPS, TELEMETRY, WEATHER) are only available 2018+
+- Consider creating separate models for pre-2018 vs. 2018+ data
+- Rolling features should use proper time-shifting to prevent data leakage
+- Many features can be aggregated at different levels: per-race, per-session, 
+  per-stint, per-lap
+
+================================================================================
+END OF DOCUMENT
+================================================================================
