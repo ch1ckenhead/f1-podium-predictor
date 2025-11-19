@@ -1,0 +1,25 @@
+{
+  "target_distribution": {
+    "podium_rate": 0.14007120893348438,
+    "class_imbalance": 6.139225880993646
+  },
+  "key_features": {
+    "grid_position": "Strong negative correlation with podium (lower grid = higher podium probability)",
+    "qualifying": "Qualifying performance likely important predictor",
+    "driver_history": "Driver historical performance should be included",
+    "constructor_history": "Constructor/team performance important"
+  },
+  "missing_data": {
+    "sprint_results": "Sprint results only available for recent years",
+    "qualifying": "Some historical races may lack qualifying data",
+    "placeholders": "FastF1 features (lap_time_variance, throttle_variance, etc.) are placeholders"
+  },
+  "recommendations": [
+    "Create rolling historical features (last N races) for drivers and constructors",
+    "Engineer grid position features (top 3, top 10, etc.)",
+    "Add circuit-specific performance features",
+    "Include driver age and experience features",
+    "Create era-based features (pre/post 2018)",
+    "Handle missing data appropriately (sprint results, qualifying)"
+  ]
+}
