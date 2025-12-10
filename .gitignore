@@ -219,3 +219,5 @@ fastf1_cache/
 
 # Large data files
 data/raw/**/*.csv
+
+CLAUDE.md
