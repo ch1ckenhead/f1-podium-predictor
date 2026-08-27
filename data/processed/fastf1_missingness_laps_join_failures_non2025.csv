@@ -1,0 +1,7 @@
+raceId,driverId,code,year,round,name,reason
+1073,853,MAZ,2021,22,Abu Dhabi Grand Prix,No matching Driver code in ALL_LAPS_2021.csv for this raceId
+1075,852,TSU,2022,2,Saudi Arabian Grand Prix,No matching Driver code in ALL_LAPS_2022.csv for this raceId
+1075,854,MSC,2022,2,Saudi Arabian Grand Prix,No matching Driver code in ALL_LAPS_2022.csv for this raceId
+1113,840,STR,2023,15,Singapore Grand Prix,No matching Driver code in ALL_LAPS_2023.csv for this raceId
+1115,832,SAI,2023,17,Qatar Grand Prix,No matching Driver code in ALL_LAPS_2023.csv for this raceId
+1141,848,ALB,2024,21,São Paulo Grand Prix,No matching Driver code in ALL_LAPS_2024.csv for this raceId

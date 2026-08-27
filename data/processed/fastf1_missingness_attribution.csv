@@ -1,0 +1,7 @@
+cause,approx_rows
+ALL_WEATHER_*.csv missing for year/race (2025 etc.),0
+ALL_LAPS_*.csv join fail (raceId+code not in race_metrics),75
+"Expected cold start (first 2018+ race per driver, shift(1))",39
+Prior races lacked computable lap metric (not first race),1
+"ALL_TELEMETRY_*.csv gap (lap OK, DRS rolling NaN)",2
+"No pit stop in prior races (lap OK, pit rolling NaN)",4

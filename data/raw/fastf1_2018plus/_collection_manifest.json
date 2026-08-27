@@ -1,0 +1,1124 @@
+{
+  "sessions": {
+    "2025|Australian Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:49:42.165362+00:00"
+    },
+    "2025|Australian Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:49:57.462395+00:00"
+    },
+    "2025|Australian Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:50:14.408689+00:00"
+    },
+    "2025|Australian Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:50:31.539694+00:00"
+    },
+    "2025|Australian Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:50:48.314834+00:00"
+    },
+    "2025|Australian Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T09:50:48.322835+00:00"
+    },
+    "2025|Chinese Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:51:13.350299+00:00"
+    },
+    "2025|Chinese Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:51:30.489520+00:00"
+    },
+    "2025|Chinese Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:51:48.035611+00:00"
+    },
+    "2025|Chinese Grand Prix|FP2": {
+      "status": "unavailable",
+      "reason": "Session type 'FP2' does not exist for this event",
+      "updated": "2026-06-24T09:51:48.045633+00:00"
+    },
+    "2025|Chinese Grand Prix|FP3": {
+      "status": "unavailable",
+      "reason": "Session type 'FP3' does not exist for this event",
+      "updated": "2026-06-24T09:51:48.057141+00:00"
+    },
+    "2025|Chinese Grand Prix|Sprint": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:52:07.274340+00:00"
+    },
+    "2025|Japanese Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:52:32.675256+00:00"
+    },
+    "2025|Japanese Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:52:49.936595+00:00"
+    },
+    "2025|Japanese Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:53:06.982896+00:00"
+    },
+    "2025|Japanese Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:53:23.394321+00:00"
+    },
+    "2025|Japanese Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:53:40.117642+00:00"
+    },
+    "2025|Japanese Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T09:53:40.126143+00:00"
+    },
+    "2025|Bahrain Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:54:06.055911+00:00"
+    },
+    "2025|Bahrain Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:54:23.241307+00:00"
+    },
+    "2025|Bahrain Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:54:40.309703+00:00"
+    },
+    "2025|Bahrain Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:54:57.373778+00:00"
+    },
+    "2025|Bahrain Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:55:14.741157+00:00"
+    },
+    "2025|Bahrain Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T09:55:14.751158+00:00"
+    },
+    "2025|Saudi Arabian Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:55:40.332537+00:00"
+    },
+    "2025|Saudi Arabian Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:55:57.556573+00:00"
+    },
+    "2025|Saudi Arabian Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:56:14.902371+00:00"
+    },
+    "2025|Saudi Arabian Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:56:32.366190+00:00"
+    },
+    "2025|Saudi Arabian Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:56:49.427452+00:00"
+    },
+    "2025|Saudi Arabian Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T09:56:49.442958+00:00"
+    },
+    "2025|Miami Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:57:15.095930+00:00"
+    },
+    "2025|Miami Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:57:32.256854+00:00"
+    },
+    "2025|Miami Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:57:49.467718+00:00"
+    },
+    "2025|Miami Grand Prix|FP2": {
+      "status": "unavailable",
+      "reason": "Session type 'FP2' does not exist for this event",
+      "updated": "2026-06-24T09:57:49.807808+00:00"
+    },
+    "2025|Miami Grand Prix|FP3": {
+      "status": "unavailable",
+      "reason": "Session type 'FP3' does not exist for this event",
+      "updated": "2026-06-24T09:57:49.816308+00:00"
+    },
+    "2025|Miami Grand Prix|Sprint": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:58:08.280215+00:00"
+    },
+    "2025|Emilia Romagna Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:58:34.243993+00:00"
+    },
+    "2025|Emilia Romagna Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:58:51.347270+00:00"
+    },
+    "2025|Emilia Romagna Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:59:08.318439+00:00"
+    },
+    "2025|Emilia Romagna Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:59:25.380095+00:00"
+    },
+    "2025|Emilia Romagna Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T09:59:42.379038+00:00"
+    },
+    "2025|Emilia Romagna Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T09:59:42.389540+00:00"
+    },
+    "2025|Monaco Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:00:08.811968+00:00"
+    },
+    "2025|Monaco Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:00:26.522883+00:00"
+    },
+    "2025|Monaco Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:00:44.377219+00:00"
+    },
+    "2025|Monaco Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:01:02.131212+00:00"
+    },
+    "2025|Monaco Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:01:19.257865+00:00"
+    },
+    "2025|Monaco Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T10:01:19.266877+00:00"
+    },
+    "2025|Spanish Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:01:45.374806+00:00"
+    },
+    "2025|Spanish Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:02:02.335175+00:00"
+    },
+    "2025|Spanish Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:02:19.501498+00:00"
+    },
+    "2025|Spanish Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:02:37.061426+00:00"
+    },
+    "2025|Spanish Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:02:54.124234+00:00"
+    },
+    "2025|Spanish Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T10:02:54.424896+00:00"
+    },
+    "2025|Canadian Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:03:18.915309+00:00"
+    },
+    "2025|Canadian Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:03:36.640201+00:00"
+    },
+    "2025|Canadian Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:03:54.004857+00:00"
+    },
+    "2025|Canadian Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:04:11.402288+00:00"
+    },
+    "2025|Canadian Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:04:28.493767+00:00"
+    },
+    "2025|Canadian Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T10:04:28.503277+00:00"
+    },
+    "2025|Austrian Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:04:54.425072+00:00"
+    },
+    "2025|Austrian Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:05:09.794161+00:00"
+    },
+    "2025|Austrian Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:05:27.538260+00:00"
+    },
+    "2025|Austrian Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:05:45.407998+00:00"
+    },
+    "2025|Austrian Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:06:02.497393+00:00"
+    },
+    "2025|Austrian Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T10:06:02.506401+00:00"
+    },
+    "2025|British Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:06:27.584148+00:00"
+    },
+    "2025|British Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:06:44.528239+00:00"
+    },
+    "2025|British Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:07:01.765286+00:00"
+    },
+    "2025|British Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:07:19.153995+00:00"
+    },
+    "2025|British Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "RESULTS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T10:07:35.903498+00:00"
+    },
+    "2025|British Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T10:07:35.912007+00:00"
+    },
+    "2025|Belgian Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:05:17.011100+00:00"
+    },
+    "2025|Belgian Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:05:29.631934+00:00"
+    },
+    "2025|Belgian Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:05:42.141665+00:00"
+    },
+    "2025|Belgian Grand Prix|FP2": {
+      "status": "unavailable",
+      "reason": "Session type 'FP2' does not exist for this event",
+      "updated": "2026-06-24T11:01:49.531958+00:00"
+    },
+    "2025|Belgian Grand Prix|FP3": {
+      "status": "unavailable",
+      "reason": "Session type 'FP3' does not exist for this event",
+      "updated": "2026-06-24T11:01:49.545472+00:00"
+    },
+    "2025|Belgian Grand Prix|Sprint": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:05:55.078362+00:00"
+    },
+    "2025|Hungarian Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:06:11.638026+00:00"
+    },
+    "2025|Hungarian Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:06:22.786939+00:00"
+    },
+    "2025|Hungarian Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:06:35.631377+00:00"
+    },
+    "2025|Hungarian Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:06:48.611714+00:00"
+    },
+    "2025|Hungarian Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:07:00.787525+00:00"
+    },
+    "2025|Hungarian Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T11:02:12.440199+00:00"
+    },
+    "2025|Dutch Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:07:16.757825+00:00"
+    },
+    "2025|Dutch Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:07:29.355151+00:00"
+    },
+    "2025|Dutch Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:07:42.222218+00:00"
+    },
+    "2025|Dutch Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:07:54.734511+00:00"
+    },
+    "2025|Dutch Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:08:07.010503+00:00"
+    },
+    "2025|Dutch Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T11:02:30.564381+00:00"
+    },
+    "2025|Italian Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:08:22.411221+00:00"
+    },
+    "2025|Italian Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:08:34.801098+00:00"
+    },
+    "2025|Italian Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:08:47.494937+00:00"
+    },
+    "2025|Italian Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:09:00.532930+00:00"
+    },
+    "2025|Italian Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:09:13.023415+00:00"
+    },
+    "2025|Italian Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T11:02:48.672238+00:00"
+    },
+    "2025|Azerbaijan Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:09:31.085385+00:00"
+    },
+    "2025|Azerbaijan Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T12:09:43.971549+00:00"
+    },
+    "2025|Azerbaijan Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:12:34.593408+00:00"
+    },
+    "2025|Azerbaijan Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:12:46.979229+00:00"
+    },
+    "2025|Azerbaijan Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:12:59.528001+00:00"
+    },
+    "2025|Azerbaijan Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T11:03:06.781868+00:00"
+    },
+    "2025|Singapore Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:13:16.322169+00:00"
+    },
+    "2025|Singapore Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:13:29.239544+00:00"
+    },
+    "2025|Singapore Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:13:41.865861+00:00"
+    },
+    "2025|Singapore Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:13:53.888792+00:00"
+    },
+    "2025|Singapore Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:14:06.976686+00:00"
+    },
+    "2025|Singapore Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T11:03:24.893290+00:00"
+    },
+    "2025|United States Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:14:23.590468+00:00"
+    },
+    "2025|United States Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:14:36.460078+00:00"
+    },
+    "2025|United States Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:14:49.099969+00:00"
+    },
+    "2025|United States Grand Prix|FP2": {
+      "status": "unavailable",
+      "reason": "Session type 'FP2' does not exist for this event",
+      "updated": "2026-06-24T11:03:35.967833+00:00"
+    },
+    "2025|United States Grand Prix|FP3": {
+      "status": "unavailable",
+      "reason": "Session type 'FP3' does not exist for this event",
+      "updated": "2026-06-24T11:03:35.976346+00:00"
+    },
+    "2025|United States Grand Prix|Sprint": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:15:02.431132+00:00"
+    },
+    "2025|Mexico City Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:15:16.956036+00:00"
+    },
+    "2025|Mexico City Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:15:30.267936+00:00"
+    },
+    "2025|Mexico City Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:15:43.494446+00:00"
+    },
+    "2025|Mexico City Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:15:57.823175+00:00"
+    },
+    "2025|Mexico City Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:16:11.566917+00:00"
+    },
+    "2025|Mexico City Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T11:03:57.908948+00:00"
+    },
+    "2025|S\u00e3o Paulo Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:16:28.239789+00:00"
+    },
+    "2025|S\u00e3o Paulo Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:16:40.853779+00:00"
+    },
+    "2025|S\u00e3o Paulo Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:16:54.182562+00:00"
+    },
+    "2025|S\u00e3o Paulo Grand Prix|FP2": {
+      "status": "unavailable",
+      "reason": "Session type 'FP2' does not exist for this event",
+      "updated": "2026-06-24T11:04:08.971927+00:00"
+    },
+    "2025|S\u00e3o Paulo Grand Prix|FP3": {
+      "status": "unavailable",
+      "reason": "Session type 'FP3' does not exist for this event",
+      "updated": "2026-06-24T11:04:08.980429+00:00"
+    },
+    "2025|S\u00e3o Paulo Grand Prix|Sprint": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T13:17:08.376668+00:00"
+    },
+    "2025|Las Vegas Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:15:17.282391+00:00"
+    },
+    "2025|Las Vegas Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:15:30.845275+00:00"
+    },
+    "2025|Las Vegas Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:15:45.088392+00:00"
+    },
+    "2025|Las Vegas Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:15:58.057427+00:00"
+    },
+    "2025|Las Vegas Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:16:11.093765+00:00"
+    },
+    "2025|Las Vegas Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T11:04:30.859347+00:00"
+    },
+    "2025|Qatar Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:16:28.174634+00:00"
+    },
+    "2025|Qatar Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:16:41.850614+00:00"
+    },
+    "2025|Qatar Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:16:55.355173+00:00"
+    },
+    "2025|Qatar Grand Prix|FP2": {
+      "status": "unavailable",
+      "reason": "Session type 'FP2' does not exist for this event",
+      "updated": "2026-06-24T11:04:41.931174+00:00"
+    },
+    "2025|Qatar Grand Prix|FP3": {
+      "status": "unavailable",
+      "reason": "Session type 'FP3' does not exist for this event",
+      "updated": "2026-06-24T11:04:41.941184+00:00"
+    },
+    "2025|Qatar Grand Prix|Sprint": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:17:09.844621+00:00"
+    },
+    "2025|Abu Dhabi Grand Prix|R": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:17:26.509788+00:00"
+    },
+    "2025|Abu Dhabi Grand Prix|Q": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:17:39.304746+00:00"
+    },
+    "2025|Abu Dhabi Grand Prix|FP1": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:17:52.362547+00:00"
+    },
+    "2025|Abu Dhabi Grand Prix|FP2": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:18:06.100997+00:00"
+    },
+    "2025|Abu Dhabi Grand Prix|FP3": {
+      "status": "complete",
+      "datasets": [
+        "LAPS",
+        "WEATHER"
+      ],
+      "updated": "2026-06-24T14:18:18.783128+00:00"
+    },
+    "2025|Abu Dhabi Grand Prix|Sprint": {
+      "status": "unavailable",
+      "reason": "Session type 'Sprint' does not exist for this event",
+      "updated": "2026-06-24T11:05:03.822795+00:00"
+    }
+  }
+}

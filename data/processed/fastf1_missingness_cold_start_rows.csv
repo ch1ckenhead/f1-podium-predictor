@@ -1,0 +1,41 @@
+raceId,driverId,code,year,round,name,is_first_2018plus_race
+989,20,VET,2018.0,1.0,Australian Grand Prix,True
+989,1,HAM,2018.0,1.0,Australian Grand Prix,True
+989,8,RAI,2018.0,1.0,Australian Grand Prix,True
+989,817,RIC,2018.0,1.0,Australian Grand Prix,True
+989,4,ALO,2018.0,1.0,Australian Grand Prix,True
+989,830,VER,2018.0,1.0,Australian Grand Prix,True
+989,807,HUL,2018.0,1.0,Australian Grand Prix,True
+989,822,BOT,2018.0,1.0,Australian Grand Prix,True
+989,838,VAN,2018.0,1.0,Australian Grand Prix,True
+989,832,SAI,2018.0,1.0,Australian Grand Prix,True
+989,815,PER,2018.0,1.0,Australian Grand Prix,True
+989,839,OCO,2018.0,1.0,Australian Grand Prix,True
+989,840,STR,2018.0,1.0,Australian Grand Prix,True
+989,843,HAR,2018.0,1.0,Australian Grand Prix,True
+989,154,GRO,2018.0,1.0,Australian Grand Prix,True
+989,825,MAG,2018.0,1.0,Australian Grand Prix,True
+989,842,GAS,2018.0,1.0,Australian Grand Prix,True
+989,828,ERI,2018.0,1.0,Australian Grand Prix,True
+990,844,LEC,2018.0,2.0,Bahrain Grand Prix,True
+990,845,SIR,2018.0,2.0,Bahrain Grand Prix,True
+1010,826,KVY,2019.0,1.0,Australian Grand Prix,True
+1010,841,GIO,2019.0,1.0,Australian Grand Prix,True
+1010,9,KUB,2019.0,1.0,Australian Grand Prix,True
+1011,846,NOR,2019.0,2.0,Bahrain Grand Prix,True
+1011,848,ALB,2019.0,2.0,Bahrain Grand Prix,True
+1011,847,RUS,2019.0,2.0,Bahrain Grand Prix,True
+1032,849,LAT,2020.0,2.0,Styrian Grand Prix,True
+1047,850,FIT,2020.0,17.0,Abu Dhabi Grand Prix,True
+1051,852,TSU,2021.0,20.0,Qatar Grand Prix,True
+1051,854,MSC,2021.0,20.0,Qatar Grand Prix,True
+1051,853,MAZ,2021.0,20.0,Qatar Grand Prix,True
+1075,855,ZHO,2022.0,2.0,Saudi Arabian Grand Prix,True
+1098,856,DEV,2023.0,1.0,Bahrain Grand Prix,True
+1099,857,PIA,2023.0,2.0,Saudi Arabian Grand Prix,True
+1099,858,SAR,2023.0,2.0,Saudi Arabian Grand Prix,True
+1112,859,LAW,2023.0,14.0,Italian Grand Prix,True
+1137,861,COL,2024.0,17.0,Azerbaijan Grand Prix,True
+1137,860,BEA,2024.0,17.0,Azerbaijan Grand Prix,True
+1145,862,DOO,2025.0,1.0,Australian Grand Prix,True
+1146,862,DOO,2025.0,2.0,Chinese Grand Prix,False
